@@ -1,0 +1,15 @@
+.navbar {
+    background-color: #54230acc;
+    border-bottom-right-radius: 25px; /* Сглаживание формы header'а */
+    border-bottom-left-radius: 25px; /* Сглаживание формы header'а */
+    padding: 20px;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.container {
+    background-color: #e4946ccc;
+    border-radius: 25px; /* Сглаживание формы контейнера */
+    padding: 20px;
+    text-align: center;
+    }
