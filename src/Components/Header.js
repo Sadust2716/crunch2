@@ -3,12 +3,6 @@ import { Navbar, Container, Nav, Button, Form, FormControl, Row, Col } from 'rea
 import logo from './CrLogo1.png';
 import './Header.css';
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from '../Pages/Home';
-import About from '../Pages/About';
-import Contacts from '../Pages/Contacts';
-import Blog from '../Pages/Blog';
-
 export default class Header extends Component {
     render() {
         return (
@@ -30,7 +24,7 @@ export default class Header extends Component {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Container>
                          <Row>
-                          <Col sm={7}>
+                          <Col sm={6}>
                            <Form inline className="ml-lg">
                             <FormControl
                                 type='text'
@@ -45,9 +39,10 @@ export default class Header extends Component {
                           <Col>
                            <Nav>
                             <Nav.Link href="/">Главная</Nav.Link>
-                            <Nav.Link href="/about">О нас</Nav.Link>
-                            <Nav.Link href="/contacts">Контакты</Nav.Link>
-                            <Nav.Link href="/blog" >Блог</Nav.Link>
+                            <Nav.Link href="/loginPage" >Войти</Nav.Link>
+                            <Nav.Link href="/Catalog" >Каталог</Nav.Link>
+                            <Nav.Link href="/Basket" >Корзина</Nav.Link>
+                            <Nav.Link href="/Basket" >Профиль</Nav.Link>
                            </Nav>
                           </Col>
                          </Row>
@@ -55,15 +50,7 @@ export default class Header extends Component {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            
-            <Router>
-                <Routes>
-                 <Route path ="/" element ={<Home />} />
-                 <Route path ="/about" element ={<About />} />
-                 <Route path ="/contacts" element ={<Contacts />} />
-                 <Route path ="/blog" element ={<Blog />} />
-                </Routes>
-            </Router>
+        
         </>
         )
     }

@@ -1,0 +1,5 @@
+.image {
+    border-bottom-right-radius: 25px; /* Сглаживание формы imag'а */
+    border-bottom-left-radius: 25px; /* Сглаживание формы imag'а */
+    padding: 20px;
+  }

@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #54230acc;
+    background-color: bisque;
     border-bottom-right-radius: 25px; /* Сглаживание формы header'а */
     border-bottom-left-radius: 25px; /* Сглаживание формы header'а */
     padding: 20px;
@@ -7,8 +7,8 @@
 .navbar-nav {
     margin-left: auto;
 }
-.container {
-    background-color: #e4946ccc;
+.container  {
+    background-color: #6c391fcc;
     border-radius: 25px; /* Сглаживание формы контейнера */
     padding: 20px;
     text-align: center;
