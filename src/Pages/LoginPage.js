@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, Image,} from 'react-bootstrap';
-import loginPageTest1 from '../assets/LoginPageTest1.jpg';
-import './LoginPage.css';
+import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import loginPageTest1 from "../assets/LoginPageTest1.jpg"
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -18,12 +17,30 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Добавьте здесь логику для проверки введенных данных и входа
-    console.log('Вход', formData);
-  };
+    
+    try {
+      const response = await fetch('http://your-api-endpoint/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
 
+      if (response.ok) {
+        // Аутентификация прошла успешно
+        console.log('Пользователь успешно вошел');
+        // Редирект пользователя на другую страницу
+        // history.push('/dashboard');
+      } else {
+        console.error('Ошибка при входе');
+      }
+    } catch (error) {
+      console.error('Произошла ошибка:', error);
+    }
+  };
   return (
     <Container className="mb-2">
       <Row className="justify-content-md-center">

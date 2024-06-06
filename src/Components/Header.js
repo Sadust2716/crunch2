@@ -8,9 +8,8 @@ export default class Header extends Component {
         return (
         <>
             <Navbar  collapseOnSelect expand="md" variant="dark">
-                <Container>
+                <Container className="navbar navbar-container">
                     <Navbar.Brand href="/">
-                        
                         <img
                             src={logo}
                             height="80"
@@ -22,7 +21,7 @@ export default class Header extends Component {
                     
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Container>
+                        <Container className="menu menu-container">
                          <Row>
                           <Col sm={6}>
                            <Form inline className="ml-lg">
