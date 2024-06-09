@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap';
-import LoginPageTest1 from "../assets/LoginPageTest1.jpg";
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import "./RegPage.css";
 
 const RegPage = () => {
   const [formData, setFormData] = useState({
@@ -18,68 +18,73 @@ const RegPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Добавьте здесь логику для регистрации нового пользователя
-    console.log('Регистрация', formData);
-  };
+    const response = await fetch('/register/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    });
+    
+    const data = await response.json();
+    console.log(data.message);
+};
+
 
   return (
-    <Container >
-      <Row className="justify-content-md-center">
-        <Col md="6" className="d-flex align-items-center">
-          <Form onSubmit={handleSubmit} style={{ width: "100%" }}>
-            <Container style={{width: '500px' }}>
-            <Form.Group >
+    <Container fluid className="RegPage-RegPage-container">
+      <Row className="justify-content-center align-items-center">
+        <Col xs={12} md={6}>
+          <Form onSubmit={handleSubmit} className="RegPage-form-container">
+            <Form.Group>
               <Form.Label>Email</Form.Label>
               <Form.Control
-                    style={{
-                      display: "flex",
-                      alignItems: "right",
-                      justifyContent: "right",
-                      height: "100%"}}
+                className="RegPage-formControlEmail-container"
                 type="email"
-                placeholder="Введите ваш email"
+                placeholder="Введите email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label className="mt-4">Пароль</Form.Label>
+              <Form.Label>Пароль</Form.Label>
               <Form.Control
+              className="RegPage-formControlPassword-container"
                 type="password"
-                placeholder="Введите ваш пароль"
+                placeholder="Введите пароль"
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label className="mt-4" variant="light">Подтвердите пароль</Form.Label>
+              <Form.Label>Подтвердите пароль</Form.Label>
               <Form.Control
+               className="RegPage-formControlConfirm-container"
                 type="password"
-                placeholder="Подтвердите ваш пароль"
+                placeholder="Подтвердите пароль"
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="success" type="submit" style={{ marginTop: "30px" }}>
+            <Button className="RegPage-form-button" variant="success" type="submit" style={{ marginTop: "20px" }}>
               Зарегистрироваться
-            </Button >
+            </Button>
             <p style={{ marginTop: "10px" }}>
               Уже есть аккаунт? <Link to="/LoginPage">Войдите</Link>.
             </p>
-            </Container>
           </Form>
-        </Col>
-        <Col md="6" className="d-none d-md-block"> {/* Для больших экранов */}
-          <Image src={LoginPageTest1} fluid />
         </Col>
       </Row>
     </Container>
   );
 };
+
 export default RegPage;
+
+
 

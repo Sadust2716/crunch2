@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col, Image } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import loginPageTest1 from "../assets/LoginPageTest1.jpg"
+import "./LoginPage.css"
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -42,14 +42,14 @@ const LoginPage = () => {
     }
   };
   return (
-    <Container className="mb-2">
-      <Row className="justify-content-md-center">
-        <Col md="6" className="d-flex align-items-center">
-          <Form onSubmit={handleSubmit} style={{ width: "100%" }}>
-          <Container style={{width: '500px' }}>
+    <Container className="LoginPage-LoginPage-container">
+      <Row className="justify-content-center align-items-center">
+        <Col Col xs={12} md={6}>
+          <Form onSubmit={handleSubmit} className="LoginPage-form-container">
             <Form.Group >
               <Form.Label>Email</Form.Label>
               <Form.Control
+                className="LoginPage-formControlEmail-container"
                 type="email"
                 placeholder="Введите ваш email"
                 name="email"
@@ -60,6 +60,7 @@ const LoginPage = () => {
             <Form.Group>
               <Form.Label className="mt-4" >Пароль</Form.Label>
               <Form.Control
+                className="LoginPage-formControlPassword-container"
                 type="password"
                 placeholder="Введите ваш пароль"
                 name="password"
@@ -67,17 +68,13 @@ const LoginPage = () => {
                 onChange={handleChange}
               />
             </Form.Group>
-            <Button variant="success" type="submit" className="mt-4">
+            <Button variant="success" type="submit" className="LoginPage-form-button">
               Войти
             </Button>
             <p style={{ marginTop: "10px" }}>
-            Если нет аккаунта, <Link to="/RegPage">можете зарегистрироваться</Link>.
+            Если нет аккаунта, <Link className="LoginPage-link" to="/RegPage">можете зарегистрироваться</Link>
           </p>
-        </Container>
           </Form>
-        </Col>
-        <Col md="6" className="d-none d-md-block"> {/* Для больших экранов */}
-          <Image src={loginPageTest1} fluid />
         </Col>
       </Row>
     </Container>  

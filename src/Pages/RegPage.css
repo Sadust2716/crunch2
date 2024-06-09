@@ -1,0 +1,20 @@
+.RegPage-form-container {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.RegPage-formControlEmail-container,
+.RegPage-formControlPassword-container,
+.RegPage-formControlConfirm-container {
+  margin-bottom: 15px;
+}
+
+.RegPage-form-button {
+  width: 100%;
+}
+.RegPage-RegPage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  height: 100%; /* Установите высоту, чтобы она соответствовала высоте CarouselBox */
+}

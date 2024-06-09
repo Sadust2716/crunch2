@@ -1,11 +1,13 @@
-.footer-navbar {
-    background-color: #343a40; /* Цвет фона Footer */
-    color: white; /* Цвет текста */
-    padding: 20px 0; /* Внутренний отступ сверху и снизу */
-    width: 100%; /* Ширина 100% */
-    position: absolute; /* Позиционирование абсолютное */
-    bottom: 0; /* Прижимаем к нижней части родительского контейнера */
-}
+
+    .footer-navbar {
+        background-color: #343a40; /* Цвет фона Footer */
+        color: white; /* Цвет текста */
+            position:  fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+    
 
 .body {
     position: relative; /* Устанавливаем позиционирование для body */

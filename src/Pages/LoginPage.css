@@ -1,0 +1,31 @@
+.LoginPage-form-container {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.LoginPage-formControlEmail-container,
+.LoginPage-formControlPassword-container,
+.LoginPage-formControlConfirm-container {
+  margin-bottom: 15px;
+}
+
+.LoginPage-form-button {
+  width: 100%;
+}
+.LoginPage-LoginPage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрирование содержимого по вертикали */
+  height: 100%; /* Установите высоту, чтобы она соответствовала высоте CarouselBox */
+}
+@media (max-width: 768px) {
+  .LoginPage-LoginPage-container {
+    padding-top: 50px; /* Добавляет отступ сверху */
+  }
+
+  /* Стили для гиперссылки, чтобы не мешала слайдеру */
+  .LoginPage-link {
+    display: block;
+    margin-top: 20px; /* Добавляет отступ сверху для ссылки */
+  }
+}

@@ -12,7 +12,8 @@ export default class Blog extends Component {
                              width={150}
                              height={150}
                              className="mr-3"
-                             src="http://klublady.ru/uploads/posts/2022-02/1645087671_3-klublady-ru-p-raznie-sladosti-foto-3.jpg"                        
+                             src="http://klublady.ru/uploads/posts/2022-02/1645087671_3-klublady-ru-p-raznie-sladosti-foto-3.jpg"  
+                             alt=''                      
                             />
 
                             <Card.Body>

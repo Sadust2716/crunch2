@@ -30,7 +30,10 @@ export default class About extends Component {
                             <Col sm = {9}>
                                 <Tab.Content className="mt-3"> 
                                     <Tab.Pane eventKey = "first"> 
-                                     <img src = "https://www.dvfu.ru/upload/iblock/a8a/165150534.jpg"/>
+                                     <img 
+                                      src = "https://www.dvfu.ru/upload/iblock/a8a/165150534.jpg" 
+                                      alt='' 
+                                     />
                                      <p>
                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                       Fermentum iaculis eu non diam phasellus vestibulum. Nibh mauris cursus mattis molestie a iaculis. 
@@ -44,7 +47,10 @@ export default class About extends Component {
                                       </p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey = "second"> 
-                                     <img src = "https://www.equipnet.ru/netcat_files/userfiles/52079/Chaynyy_magazin/006-3.jpg"/>
+                                     <img 
+                                      src = "https://www.equipnet.ru/netcat_files/userfiles/52079/Chaynyy_magazin/006-3.jpg" 
+                                      alt='' 
+                                     />
                                      <p>
                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                       Fermentum iaculis eu non diam phasellus vestibulum. Nibh mauris cursus mattis molestie a iaculis. 
@@ -58,7 +64,10 @@ export default class About extends Component {
                                       </p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey = "third"> 
-                                     <img src = "https://karpovka.com/pics/2020/08/44444444444444444444444444.jpg"/>
+                                     <img 
+                                      src = "https://karpovka.com/pics/2020/08/44444444444444444444444444.jpg" 
+                                      alt='' 
+                                    />
                                      <p>
                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                       Fermentum iaculis eu non diam phasellus vestibulum. Nibh mauris cursus mattis molestie a iaculis. 
@@ -72,7 +81,10 @@ export default class About extends Component {
                                       </p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey = "fourth"> 
-                                     <img src = "http://www.fitfit.ru/img/p40b299d496eea64244b5d2e96901d1c7-w900-h600-tm.jpg"/>
+                                     <img 
+                                      src = "http://www.fitfit.ru/img/p40b299d496eea64244b5d2e96901d1c7-w900-h600-tm.jpg" 
+                                      alt='' 
+                                     />
                                      <p>
                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                       Fermentum iaculis eu non diam phasellus vestibulum. Nibh mauris cursus mattis molestie a iaculis. 
@@ -86,7 +98,10 @@ export default class About extends Component {
                                       </p>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey = "fifth"> 
-                                     <img src = "https://s0.rbk.ru/v6_top_pics/media/img/9/29/755754668931299.jpeg"/>
+                                     <img 
+                                      src = "https://s0.rbk.ru/v6_top_pics/media/img/9/29/755754668931299.jpeg" 
+                                      alt='' 
+                                    />
                                      <p>
                                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                                       Fermentum iaculis eu non diam phasellus vestibulum. Nibh mauris cursus mattis molestie a iaculis. 
@@ -102,7 +117,6 @@ export default class About extends Component {
                                 </Tab.Content>
                             </Col>
                         </Row>
-
                     </Tab.Container>
                 </Container>
             </div>

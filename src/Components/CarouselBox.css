@@ -1,0 +1,82 @@
+/* Общие стили для всех устройств */
+.CarouselBox-Carousel-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+      
+  }
+  
+  .CarouselBox-LoginPage-container,  
+  .CarouselBox-Contacts-container, 
+  .CarouselBox-RegPage-container {
+    background-color: #f9f9f9;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px; /* Сглаживание формы header'а */
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px; /* Сглаживание формы header'а */
+    flex-grow: 1; /* Это заставит контейнеры растягиваться и занимать все доступное пространство */
+    min-height: 300px; /* Минимальная высота для всех контейнеров */
+  }
+  
+
+  /* Стили для десктопных устройств */
+  @media (min-width: 1024px) {
+    .CarouselBox-Carousel-container {
+      min-height: 500px; /* Минимальная высота для десктопов */
+    }
+  
+    .CarouselBox-LoginPage-container,  
+    .CarouselBox-Contacts-container, 
+    .CarouselBox-RegPage-container {
+      height: 500px; /* Высота для десктопов */
+    }
+  }
+  
+/* Стили для мобильных устройств */
+@media (max-width: 1023px) {
+    .CarouselBox-Carousel-container {
+      min-height: 300px; /* Минимальная высота для всех слайдов */
+    }
+  
+    .CarouselBox-LoginPage-container,  
+    .CarouselBox-Contacts-container, 
+    .CarouselBox-RegPage-container {
+      min-height: 300px; /* Минимальная высота для всех контейнеров */
+      padding: 10px; /* Меньше отступы для мобильных устройств */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  @media (max-width: 768px) {
+    /* Стили для контейнера CarouselBox */
+    .CarouselBox {
+      /* Уменьшите размеры или измените другие стили, чтобы содержимое помещалось */
+      width: 100%; /* Пример изменения ширины */
+      margin: auto; /* Центрирование слайдера */
+    }
+  
+    /* Стили для LoginPage внутри слайдера */
+    .LoginPage {
+      /* Адаптивные изменения для мобильных устройств */
+      padding: 10px; /* Пример изменения отступов */
+    }
+  
+    /* Стили для RegPage внутри слайдера */
+    .RegPage {
+      /* Адаптивные изменения для мобильных устройств */
+      padding: 10px; /* Пример изменения отступов */
+    }
+  
+    /* Стили для Contacts внутри слайдера */
+    .Contacts {
+      /* Адаптивные изменения для мобильных устройств */
+      padding: 10px; /* Пример изменения отступов */
+    }  
+}
+  
+  
+  
+  

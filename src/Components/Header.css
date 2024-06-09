@@ -1,25 +1,47 @@
 /* Стили для навигационного меню */
-.navbar {
+.Header-navbar {
     background-color: bisque;
-    border-bottom-right-radius: 25px; /* Сглаживание формы header'а */
-    border-bottom-left-radius: 25px; /* Сглаживание формы header'а */
-    padding: 20px;
+    border: 1px solid #6c391fcc;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 5px;
+    margin: 0; /* Убираем отступы */
+    width: 100%; /* Растягиваем на всю ширину */
+  }
+  
+  /* Стили для контейнера */
+  .navbar-container {
+    border-radius: 25px;
+    padding: 1px;
+    text-align: center;
+    width: 100%; /* Растягиваем на всю ширину */
+  }
+  
+/* Стили для формы поиска */
+.search-form {
+    display: flex;
+    width: 100%;
 }
 
-.header .navbar-nav {
-    margin-left: auto;
+/* Медиа-запросы для адаптации под разные размеры экранов */
+@media (max-width: 991px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    
+    .mr-sm-2 {
+        width: 100%; /* Ширина поля ввода будет занимать всю доступную ширину */
+    }
+    
+    .Header-NavBar-Button {
+        margin-top: 5px; /* Добавляем небольшой отступ между полем ввода и кнопкой */
+    }
 }
-
-/* Стили для контейнера */
- .navbar-container {
-    background-color: #6c391fcc;
-    border-radius: 25px; /* Сглаживание формы контейнера */
-    padding: 20px;
-    text-align: center;
 }
-.menu-container {
-    background-color: #6c391fcc;
-    border-radius: 25px; /* Сглаживание формы контейнера */
-    padding: 20px;
-    text-align: center;
-}
+/* Стили для ссылки профиля, видимой только на десктопе */
+@media (min-width: 992px) {
+    .d-none.d-lg-block {
+      display: block;
+    }
+  }
+  

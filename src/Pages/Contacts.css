@@ -1,0 +1,19 @@
+  .Contacts-form-container {
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .Contacts-formControlEmail-container,
+  .Contacts-formControlArea-container
+   {
+    margin-bottom: 15px;
+  }
+  .Contacts-form-button {
+    width: 100%;
+  }
+  .Contacts-Contacts-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование содержимого по вертикали */
+    height: 100%; /* Установите высоту, чтобы она соответствовала высоте CarouselBox */
+  }
+  
