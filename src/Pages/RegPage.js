@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import "./RegPage.css";
 
 const RegPage = () => {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
+  const [formData, setFormData] = useState({ 
+    email: '', 
+    password: ''
+});
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,21 +18,28 @@ const RegPage = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const response = await fetch('/register/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    });
-    
-    const data = await response.json();
-    console.log(data.message);
+  const handleSubmit = async (e) => { 
+    e.preventDefault(); 
+    const { email, password } = formData;
+
+    if (!email || !password) {
+        console.log('Пожалуйста, заполните все поля');
+        return;
+    }
+
+    const data = { email, password };
+
+    const response = await fetch('/register/', { 
+        method: 'POST', 
+        headers: { 
+            'Content-Type': 'application/json', 
+        }, 
+        body: JSON.stringify(data), 
+    }); 
+
+    const responseData = await response.json(); 
+    console.log(responseData.message); 
 };
-
-
   return (
     <Container fluid className="RegPage-RegPage-container">
       <Row className="justify-content-center align-items-center">
